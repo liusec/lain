@@ -14,10 +14,9 @@ Vagrant.configure(2) do |config|
         v.memory = i == 1 ? 1536 : 512
       end
 
-      node.vm.network "private_network", ip: "192.168.77.2#{i}"
+      node.vm.network "private_network", ip: "192.168.77.2#{i}", auto_config: false
 
     end
 
   end
-
 end
